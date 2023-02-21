@@ -11,7 +11,6 @@ public class EmailMain {
 		
 		
 		// update user info
-		controller.setFullName("john", "stock");
 		controller.generateRandomPassword();
 		
 		System.out.println("\nUpdated user info: ");
@@ -22,7 +21,7 @@ public class EmailMain {
 	
 	private static EmailModel getUser() {
 		EmailModel user = new EmailModel();
-		user.setFullName("ian", "doe");
+		user.setFullName();
 		user.setDepartment();
 		user.generateEmail();
 		user.generateRandomPassword(8);

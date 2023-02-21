@@ -10,14 +10,19 @@ public class EmailModel {
 	private String department;
 	private String companyAbr = "droloe.com";
 	
+	Scanner scanner = new Scanner(System.in);
+	
 	
 	public String getFullName() {
 		return firstName +" "+ lastName;
 	}
 	
-	public void setFullName(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public void setFullName() {		
+		System.out.print("FirstName: ");
+		this.firstName = scanner.next();
+		
+		System.out.print("LastName: ");
+		this.lastName = scanner.next();
 	}
 	
 	public String getDepartment() {
@@ -25,20 +30,17 @@ public class EmailModel {
 	}
 	
 	public void setDepartment() {
-		try (Scanner scanner = new Scanner(System.in)) {
-			System.out.print("Department Codes\n1 for Art\n2 for Biochemistry\n3 for Accounting\nEnter department code: ");
-			int deptChoice = scanner.nextInt();
-			
-			if(deptChoice == 1) {
-				this.department = "art";
-			} else if (deptChoice == 2) {
-				this.department = "biochemistry";
-			} else if (deptChoice == 3) {
-				this.department = "accounting";
-			} else {
-				this.department = "none";
-			}
-				
+		System.out.print("Department Codes\n1 for Art\n2 for Biochemistry\n3 for Accounting\nEnter department code: ");
+		int deptChoice = scanner.nextInt();
+		
+		if(deptChoice == 1) {
+			this.department = "art";
+		} else if (deptChoice == 2) {
+			this.department = "biochemistry";
+		} else if (deptChoice == 3) {
+			this.department = "accounting";
+		} else {
+			this.department = "none";
 		}
 	}
 

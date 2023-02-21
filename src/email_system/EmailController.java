@@ -10,8 +10,8 @@ public class EmailController {
 		this.view = view;
 	}
 	
-	public void setFullName(String firstName, String lastName) {
-		model.setFullName(firstName, lastName);
+	public void setFullName() {
+		model.setFullName();
 	}
 	
 	public String getFullName() {
